@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "motion/react"
 import { useDispatch } from "react-redux";
 import useForm from "../Hooks/useForm.js";
 import ModalInfo from "../../Components/Modals/ModalInfo.jsx";
 import { saveFormData } from "../../store/features/form/formslice.jsx";
 
-
-const FormWithMotionAndHook = ({ titleForm }) => {
+// eslint-disable-next-line react/prop-types
+const FormWithMotionAndHook = ({titleForm}) => {
     const dispatch = useDispatch();
-    const { formData, handleChange, resetForm } = useForm({
+    const {formData, handleChange, resetForm} = useForm({
         module: "React Mod7",
         username: "",
         email: "",
@@ -16,8 +16,7 @@ const FormWithMotionAndHook = ({ titleForm }) => {
     });
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState("");
-    const [passwordVisible, setPasswordVisible] = useState(false); // Estado para controlar la visibilidad del password
-
+    const [passwordVisible, setPasswordVisible] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
         const { username, email, password } = formData;
@@ -40,22 +39,21 @@ const FormWithMotionAndHook = ({ titleForm }) => {
     const togglePasswordVisibility = () => {
         setPasswordVisible((prev) => !prev);
     };
-
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 0.5}}
         >
             <ModalInfo
                 visible={showModal}
                 message={modalMessage}
                 onClose={onCloseModalInfo}
             />
-            <form className="fr" onSubmit={handleSubmit}>
-                <h3>{titleForm}</h3>
-                <label className="password">
+            <form onSubmit={handleSubmit}>
+            <h3>{titleForm}</h3>
+            <label>
                     Module:
                     <input
                         className="in"
@@ -67,7 +65,7 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                     />
                 </label>
                 <div>
-                    <label className="password">
+                    <label >
                         Username:
                         <input
                             className="in"
@@ -80,7 +78,7 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                     </label>
                 </div>
                 <div>
-                    <label className="password">
+                    <label >
                         Email:
                         <input
                             className="in"
@@ -92,10 +90,10 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                         />
                     </label>
                 </div>
-                <div className="password">
-                    <label className="password">
+                <div className="pass">
+                    <label >
                         Password:
-                        <div className="password">
+                        <div className="pass">
                             <input
                                 className="in"
                                 type={passwordVisible ? "text" : "password"}
@@ -104,7 +102,7 @@ const FormWithMotionAndHook = ({ titleForm }) => {
                                 onChange={handleChange}
                                 required
                             />
-                            <button
+                            <button 
                                 type="button"
                                 onClick={togglePasswordVisibility}
                                 className="logout-btn"
@@ -119,8 +117,4 @@ const FormWithMotionAndHook = ({ titleForm }) => {
         </motion.div>
     );
 };
-
-
 export default FormWithMotionAndHook;
-
-
