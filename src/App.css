@@ -41,6 +41,7 @@
   color: #888;
 }
 
+/* Estilo del Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -50,18 +51,58 @@
   background-color: #f0f2f4;
   border-bottom: solid 1px #ccc;
   padding: 0.5rem 1rem;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* Centra los elementos verticalmente */
 }
 
-.nav-link {
+.navbar .nav-link {
   text-decoration: none;
   color: black;
-  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s; /* Transición para hover */
 }
 
-.nav-link:hover {
-  color: #5378c3;
+.navbar .nav-link:hover {
+  background-color: #5378c3; /* Fondo azul claro al pasar el cursor */
+  color: white;  /* Texto blanco al pasar el cursor */
 }
+
+.navbar .nav-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn {
+  background-color: #007bff;  /* Fondo azul */
+  color: white;  /* Texto blanco */
+  border: none;
+  border-radius: 15px;  /* Bordes redondeados */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición para hover */
+}
+
+.navbar .logout-btn:hover {
+  background-color: #0056b3;  /* Azul más oscuro al pasar el cursor */
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 
 .modal-overlay {
   position: fixed;
@@ -88,13 +129,111 @@
   position: relative;
 }
 
-.close-btn-success {
+
+.notification-modal {
+  
+  background-color: #7e4f1a; /* Color por defecto */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+/* Modal Content - Éxito (verde) */
+.notification-success {
+  background-color: #28a745; /* Verde */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+/* Modal Content - Error (rojo) */
+.notification-error {
+  background-color: #dc3545; /* Rojo */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.close-btn {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   background: transparent;
   border: none;
-  color: #7e4f1a;
+  color: black;
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 25;
+}
+
+
+
+.form-container {
+  
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+
+
+/* Estilo del encabezado */
+.title {
+  font-size: 56 rem;
+  margin-bottom: 20px;
+  background-color: #28a745;
+  color: white;
+}
+
+
+
+
+/* Estilo para el botón */
+.password-toggle-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.fr {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: left;
+ 
+}
+.password{
+  display: flex;
+}
+.in{
+  display: flex;
+  color:black;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.password-toggle-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
