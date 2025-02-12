@@ -1,5 +1,3 @@
-
-
 export default function Modulo7() {
   return (
     <div className="container">
@@ -24,16 +22,18 @@ export default function Modulo7() {
           <h2>Temas Cubiertos</h2>
           <hr />
           <table>
-            <tr>
-              <td>Componentes funcionales y de clase</td>
-              <td>Uso de React hooks como useState y useEffect</td>
-              <td>Creación de custom hooks como useForm</td>
-              <td>Gestión de variables de estado con useState</td>
-              <td>Gestión de estado global con Redux</td>
-              <td>Integración de Redux con React</td>
-              <td>Manejo de Formularios en React</td>
-              <td>Publicando nuestra Página con GitHub Pages</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Componentes funcionales y de clase</td>
+                <td>Uso de React hooks como useState y useEffect</td>
+                <td>Creación de custom hooks como useForm</td>
+                <td>Gestión de variables de estado con useState</td>
+                <td>Gestión de estado global con Redux</td>
+                <td>Integración de Redux con React</td>
+                <td>Manejo de Formularios en React</td>
+                <td>Publicando nuestra Página con GitHub Pages</td>
+              </tr>
+            </tbody>
           </table>
         </section>
 
