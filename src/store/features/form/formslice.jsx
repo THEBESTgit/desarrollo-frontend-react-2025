@@ -15,7 +15,8 @@ const formSlice = createSlice({
             const { username, email, password } = action.payload;
 
             // Solo guarda los datos si el password es válido
-            if (password === "mod7USIP-TUNOMBRE") {
+
+            if (password === "mod7USIP-Victor") {
                 state.username = username;
                 state.email = email;
                 state.password = password;
@@ -24,6 +25,13 @@ const formSlice = createSlice({
                 localStorage.setItem("username", username);
                 localStorage.setItem("email", email);
                 localStorage.setItem("password", password);
+
+
+                // Verifica que los datos se guardaron
+                console.log("Datos guardados en Redux y localStorage:", { username, email });
+            } else {
+                console.log("Contraseña incorrecta");
+
             }
         },
         clearFormData: (state) => {

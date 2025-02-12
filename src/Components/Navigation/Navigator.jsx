@@ -1,16 +1,24 @@
-import { Link } from "react-router";
+import Home from '../../screens/Home.jsx';
+import Products from '../../screens/Product.jsx';
+import About from '../../screens/About.jsx';
+import Think from '../../screens/Think.jsx';
+import Counter from '../Counter/Counter.jsx';
+import Login from '../../screens/Login.jsx';
+import LP from '../../screens/LP.jsx';
 
-const Navigator = () => {
+import { Routes, Route } from "react-router";
+
+const Router = () => {
     return (
-        <nav className="navbar">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/login" className="nav-link">Login</Link>
-            <Link to="/counter" className="nav-link">Counter</Link>
-            <Link to="/think" className="nav-link">Think</Link>
-            <Link to="/products" className="nav-link">Product</Link>
-            <Link to="/about" className="nav-link">About</Link>
-        </nav>
+        <Routes>
+            <Route index element={<LP />} />
+            <Route path="login" element={<Login />} />
+            <Route path="products" element={<Products />} />
+            <Route path="think" element={<Think />} />
+            <Route path="about" element={<About />} />
+            <Route path="counter" element={<Counter />} />
+        </Routes>
     );
 }
 
-export default Navigator;
+export default Router;
