@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://THEBESTgit.github.io/desarrollo-frontend-react-2025",
+  "homepage": "https://thebestgit.github.io/desarrollo-frontend-react-2025/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
