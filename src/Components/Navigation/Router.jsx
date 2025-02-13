@@ -37,6 +37,7 @@ const Navigator = () => {
           <Link to="/think" className="nav-link">Think</Link>
           <Link to="/products" className="nav-link">Product</Link>
           <Link to="/about" className="nav-link">About</Link>
+          <Link to="/dictionary" className="nav-link">Dictionary</Link>
 
           {/* Solo muestra la información del usuario y el botón de logout si está logueado */}
           {username || email ? (

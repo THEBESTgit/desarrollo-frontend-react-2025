@@ -132,11 +132,15 @@
 
 .notification-modal {
   
-  background-color: #7e4f1a; /* Color por defecto */
-  padding: 20px;
+  background-color: #7e4f1a;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   position: relative;
+  width: 400px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 /* Modal Content - Éxito (verde) */
 .notification-success {
@@ -167,6 +171,68 @@
   z-index: 25;
 }
 
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.modal-form-group {
+  display: flex; /* Usa Flexbox */
+  align-items: center; /* Alinea verticalmente */
+  margin-bottom: 10px; /* Espacio entre grupos */
+}
+
+/* Ajustes para el label */
+.modal-label {
+  font-size: 1rem;
+  font-weight: bold;
+  width: 120px; /* Ancho fijo para el label */
+  text-align: right; /* Alinea el texto a la derecha */
+  margin-right: 10px; /* Espacio entre el label y el input */
+}
+
+/* Ajustes para el input */
+.modal-input, .modal-select, .modal-textarea {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 8px;
+  border: 1px solid #cc8259;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Estilos de los inputs y select */
+.modal-input, .modal-select, .modal-textarea {
+  width: calc(100% - 140px);
+  padding: 8px;
+  margin-left: 10px;
+  border: 1px solid #cc8259;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Textarea (traducción) */
+.modal-textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* Botón de acción */
+.modal-button {
+  background-color: #cc8259;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 75%;
+}
+
+.modal-button:hover {
+  background-color: #a66040;
+}
 
 
 .form-container {
