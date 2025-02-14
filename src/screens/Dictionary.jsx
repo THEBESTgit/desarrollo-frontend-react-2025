@@ -41,6 +41,8 @@ const Dictionary = () => {
   return (
     <div className="dictionary-container">
       <h1>Diccionario Multilingüe</h1>
+      <p>Este Modulo diccionario corresponde al Recuperatorio del</p>
+      <p>modulo 7 ReactJS. URL: https://thebestgit.github.io/desarrollo-frontend-react-2025/</p>
       <button onClick={() => setModalType("add")}>Agregar Palabra</button>
       <button onClick={() => setModalType("remove")}>Eliminar Palabra</button>
       <button onClick={() => setModalType("translate")}>Traducir</button>
@@ -48,6 +50,7 @@ const Dictionary = () => {
       {modalType === "add" && (
   <ModalInfo visible={true} onClose={() => setModalType(null)}>
     <h2 className="modal-title">Traductor USIP</h2>
+    
     <div className="modal-form-group">
       <label className="modal-label">Español:</label>
       <input
@@ -105,6 +108,7 @@ const Dictionary = () => {
   <ModalInfo visible={true} onClose={() => setModalType(null)}>
     <h2 className="modal-title">Traductor USIP</h2>
     <p>¿Qué palabra desea traducir en el diccionario?</p>
+    <p>Agrege su palabra y despues el idioma de traduccion</p>
     <div className="modal-form-group">
       <label className="modal-label">Palabra a traducir:</label>
       <input
